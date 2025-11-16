@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모바일 사진 슬라이드</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .swiper {
+      width: 100%;
+      max-width: 500px;
+      height: auto; /* 이미지에 따라 높이 자동 조절 */
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      background: #fff;
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto; /* 이미지 비율 유지 */
+      object-fit: contain;
+      background: #fff;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://i.ibb.co/DH0zV4xd/1.jpg" alt="2"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/HLL9vs2F/2.jpg" alt="3"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/M5hg9kXh/3.jpg" alt="4"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/sdLWLSVT/4.jpg" alt="5"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/Zz7rKcmN/5.jpg" alt="6"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/dwC4ZZf7/6.jpg" alt="7"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/Z6yZXvGF/7.jpg" alt="8"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/C5r8FJcc/8.jpg" alt="9"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/DDf8hbNN/9.jpg" alt="10"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/mFRrvNn8/10.jpg" alt="11"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/4wVXYzDg/11.jpg" alt="12"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/5WWwqKKk/12.jpg" alt="13"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/sJmNDp6Z/13.jpg" alt="14"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/RT4Mmhtt/14.jpg" alt="15"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/vCd2BG7N/15.jpg" alt="16"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/8gpXhNS5/16.jpg" alt="17"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/cKhd0yfp/17.jpg" alt="18"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/0RMVvxnR/18.jpg" alt="19"></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/gFcbfX2p/19.jpg" alt="20"></div>
+    </div>
+    <!-- 페이지네이션 -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 10,
+    });
+  </script>
+</body>
+</html>
