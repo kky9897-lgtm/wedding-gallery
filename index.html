@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>모바일 사진 슬라이드</title>
+  <title>가로 사진 슬라이드</title>
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -14,13 +14,12 @@
       padding: 0;
       background: #000;
       height: 100vh;
+      overflow: hidden;
     }
 
     .swiper {
       width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      background: #000;
+      height: 100vh; /* 화면 전체 높이 */
     }
 
     .swiper-wrapper {
@@ -38,8 +37,9 @@
     }
 
     .swiper-slide img {
-      width: 100%;   /* 이미지 원본 비율 유지 */
-      height: auto;  /* 세로 기준으로 자동 */
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 화면 꽉 채움 */
       display: block;
     }
 
@@ -62,17 +62,8 @@
       <div class="swiper-slide"><img src="https://i.ibb.co/VpL8S0R4/1-8.jpg" alt="1-8"></div>
       <div class="swiper-slide"><img src="https://i.ibb.co/ns0FgMFh/1-9.jpg" alt="1-9"></div>
       <div class="swiper-slide"><img src="https://i.ibb.co/HLSRB8JY/1-10.jpg" alt="1-10"></div>
-      <div class="swiper-slide"><img src="https://i.ibb.co/NdT43qzx/1-12.jpg" alt="1-12"></div>
-      <div class="swiper-slide"><img src="https://i.ibb.co/xqDbwzzq/1-13.jpg" alt="1-13"></div>
-      <div class="swiper-slide"><img src="https://i.ibb.co/QFk2J6SS/1-14.jpg" alt="1-14"></div>
-      <div class="swiper-slide"><img src="https://i.ibb.co/3YCGpjGv/1-15.jpg" alt="1-15"></div>
-      <div class="swiper-slide"><img src="https://i.ibb.co/qh7kWnr/1-16.jpg" alt="1-16"></div>
-      <div class="swiper-slide"><img src="https://i.ibb.co/0jQKZsSV/1-17.jpg" alt="1-17"></div>
-      <div class="swiper-slide"><img src="https://i.ibb.co/PZ2qk6sv/1-18.jpg" alt="1-18"></div>
-      <div class="swiper-slide"><img src="https://i.ibb.co/JFgQj5dK/1-19.jpg" alt="1-19"></div>
     </div>
 
-    <!-- 페이지네이션 -->
     <div class="swiper-pagination"></div>
   </div>
 
@@ -83,7 +74,6 @@
       loop: false,
       slidesPerView: 1,
       spaceBetween: 0,
-      autoHeight: false, // 한 번에 하나 슬라이드
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -93,4 +83,3 @@
 
 </body>
 </html>
-
